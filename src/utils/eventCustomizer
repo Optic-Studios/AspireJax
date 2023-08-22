@@ -1,0 +1,28 @@
+export function applyCustomEventStyles(element, event) {
+  if (event.allDay) {
+    element.style.borderWidth = '1.5px';
+    element.style.borderStyle = 'solid';
+    element.style.backgroundColor = hexToRgba(event.backgroundColor, 0.2);
+    element.style.borderColor = event.backgroundColor;
+  }
+}
+
+export function hexToRgba(hex, alpha) {
+  // Remove the '#' symbol if present
+  hex = hex.replace('#', '');
+
+  // Convert hex to RGB values
+  const red = parseInt(hex.substring(0, 2), 16);
+  const green = parseInt(hex.substring(2, 4), 16);
+  const blue = parseInt(hex.substring(4, 6), 16);
+
+  // Convert RGB values to decimal (0 to 1)
+  const normalizedRed = red / 255;
+  const normalizedGreen = green / 255;
+  const normalizedBlue = blue / 255;
+
+  // Create and return the RGBA string
+  return `rgba(${normalizedRed * 100}%, ${normalizedGreen * 100}%, ${
+    normalizedBlue * 100
+  }%, ${alpha})`;
+}
