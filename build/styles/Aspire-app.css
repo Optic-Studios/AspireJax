@@ -1,0 +1,143 @@
+input {
+  font-size: 16 px;
+}
+input:focus {
+  font-size: 16px;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  select,
+  textarea,
+  input,
+  .ql-editor {
+    font-size: 16px;
+  }
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  select:focus,
+  textarea:focus,
+  input:focus,
+  .ql-editor:focus {
+    font-size: 16px;
+  }
+}
+:root {
+  --black: #202020;
+  --white: #ffffff;
+  --Background: #151515;
+  --Subtle: #595959;
+  --Text: #e0e0e0;
+  --Text-Soft: #595959;
+  --Text-Strong: #ffffff;
+  --Outline: #2a2a2a;
+  --Border: #2a2a2a;
+  --Brand: #689ac7;
+}
+svg {
+  fill: CurrentColor;
+}
+input,
+textarea {
+  touch-action: manipulation;
+}
+@media (prefers-color-scheme: dark) {
+  body,
+  .event-details-section,
+  .notes-top {
+    background: var(--Background);
+    color: var(--Text);
+  }
+  h1,
+  h2,
+  h3,
+  a,
+  .text-color-blue {
+    color: var(--Brand);
+  }
+  h4,
+  h5,
+  h6,
+  .heading-style-h4,
+  .heading-style-h5,
+  .heading-style-h6 {
+    color: var(--Text-Strong);
+  }
+  p,
+  .button.is-text,
+  .fs_modal-1_close-icon {
+    color: var(--Text);
+  }
+  .text-color-black,
+  .mobile-header,
+  .Navbar-Logo,
+  .tab-link,
+  .button.is-icon.is-tab {
+    color: #fff;
+  }
+  .navbar-wrapper,
+  .mobile-header,
+  .background-color-white {
+    background: var(--Subtle);
+  }
+  .background-color-grey,
+  .section-header,
+  .event-details-datetime-div,
+  .ql-text,
+  .notes-bottom {
+    background: #2a2a2a;
+  }
+  .background-color-black {
+    background: var(--white);
+  }
+  .icon-1x1-medium {
+    fill: CurrentColor;
+  }
+  .textarea,
+  .text-field,
+  .list-item,
+  .Sermon-Text-Input {
+    background: #2a2a2a;
+    border-color: #595959;
+    color: #fff;
+  }
+  .dark-only {
+    display: block;
+  }
+  .light-only {
+    display: none;
+  }
+  .side-navbar {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+  }
+  .swiper-3d.swiper-slide-shadow-left {
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  }
+  .swiper-slide-shadow-right {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  }
+  .series-list-item-info-learnmore {
+    background: rgba(0, 0, 0, 0.2);
+    border-color: #000;
+  }
+  .event-details-cost-div {
+    background: rgba(12, 53, 16, 0.3);
+    color: #4abe39;
+  }
+  .d,
+  .e,
+  .f,
+  .g,
+  .navbar-logo {
+    fill: #fff;
+    color: #fff;
+  }
+  .ql-toolbar-wrapper,
+  .ql-toolbar {
+    background: #404040;
+  }
+  .ql-editor.ql-blank:before {
+    color: var(--Subtle);
+  }
+  .text-field.search:focus {
+    box-shadow: 0 0 60px 100px #2a2a2a;
+  }
+}

@@ -1,0 +1,312 @@
+:root {
+  --Brand: #689ac7;
+  --color-surface-mixed-100: #181c24;
+  --color-surface-mixed-200: #2d3139;
+  --color-surface-mixed-300: #3a3e45;
+  --color-surface-mixed-400: #44474e;
+  --color-surface-mixed-500: #5c5f65;
+  --color-surface-mixed-600: #75777d;
+  --color-surface-mixed-700: #8f9196;
+  --color-surface-mixed-800: #b0b3b9;
+}
+
+input,
+textarea {
+  touch-action: manipulation;
+}
+
+.announcement.good ::selection {
+  background-color: rgba(55, 240, 61, 0.5);
+  color: white;
+}
+
+.announcement.warning ::selection {
+  background-color: rgba(222, 240, 56, 0.5);
+  color: white;
+}
+
+.announcement.critical ::selection {
+  background-color: rgba(235, 13, 13, 0.5);
+  color: white;
+}
+
+input:autofill {
+  background-color: rgba(33, 134, 225, 0.7) !important;
+  border: 3px solid #2186e1;
+}
+input:-webkit-autofill {
+  background-color: rgba(33, 134, 225, 0.7) !important;
+  border: 3px solid #2186e1;
+}
+
+::-moz-selection {
+  color: white;
+  background: rgba(61, 107, 153, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+::selection {
+  color: white;
+  background: rgba(61, 107, 153, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+svg {
+  fill: currentColor;
+}
+
+/*width*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0);
+  border-radius: 20px;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #2186e1;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 5px 0px;
+}
+
+.rtTooltipHeader {
+  padding: 5px 10px 5px 15px;
+}
+.rtTooltipFooter {
+  padding: 0px 50px 25px 0px;
+}
+.rtTooltipBrandLink {
+  visibility: hidden;
+}
+.rtTooltipRoundedCorners .rtContainer {
+  border-radius: 10px;
+}
+
+.iframe {
+  border-radius: 10px;
+}
+
+/* Media query for tablets and desktops */
+@media screen and (min-width: 768px) {
+  .tab-collapsed {
+    /* Adjust the styles for tablets and desktops here */
+    padding-left: 7rem;
+  }
+
+  .tab-collapsed .navbar-logo.full {
+    display: none;
+  }
+
+  .tab-collapsed .navbar-logo.small {
+    display: flex;
+  }
+
+  .tab-collapsed .button.navbar .hide-mobile-landscape {
+    display: none;
+  }
+
+  .tab-collapsed .collapse-content {
+    display: none;
+  }
+
+  .tab-collapsed .navbar-wrapper {
+    width: auto;
+  }
+
+  .tab-collapsed #collapse {
+    display: none;
+  }
+
+  .tab-collapsed #expand {
+    display: block;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: var(--color-surface-mixed-200);
+    color: var(--color-surface-mixed-800);
+  }
+
+  .page-wrapper,
+  .event-details-section,
+  .notes-top {
+    background-color: var(--color-surface-mixed-100);
+  }
+
+  h1,
+  h2,
+  h3,
+  a,
+  .text-color-blue {
+    color: var(--Brand);
+  }
+
+  h4,
+  h5,
+  h6,
+  .heading-style-h4,
+  .heading-style-h5,
+  .heading-style-h6,
+  label {
+    color: white;
+  }
+
+  p,
+  .button.is-text,
+  .fs_modal-1_close-icon {
+    color: var(--color-surface-mixed-800);
+  }
+
+  .dash-block,
+  .connect-form-input-wrapper {
+    background: var(--color-surface-mixed-200);
+  }
+
+  .dash-block.announcements {
+    background: transparent;
+  }
+
+  .announcement.good {
+    color: #37f03d;
+  }
+
+  .announcement.warning {
+    color: #def038;
+  }
+  .mobile-header {
+    background: var(--color-surface-mixed-200);
+    color: white;
+  }
+
+  .mobile-header.spacer {
+    background-color: transparent;
+  }
+
+  .text-color-black,
+  .mobile-header,
+  .Navbar-Logo,
+  .tab-link,
+  .button.is-icon.is-tab {
+    color: white;
+  }
+
+  .background-color-white {
+    background: var(--color-surface-mixed-200);
+  }
+
+  .background-color-grey,
+  .section-header,
+  .event-details-datetime-div,
+  .ql-text,
+  .notes-bottom {
+    background: var(--color-surface-mixed-400);
+  }
+
+  .background-color-black {
+    background: white;
+  }
+
+  .icon-1x1-medium {
+    fill: currentColor;
+  }
+
+  .textarea,
+  .text-field,
+  .Sermon-Text-Input {
+    background: var(--color-surface-mixed-100);
+    border-color: var(--color-surface-mixed-400);
+    color: white;
+  }
+
+  .list-item {
+    background: var(--color-surface-mixed-200);
+    border-color: var(--color-surface-mixed-400);
+    color: white;
+  }
+  .dark-only {
+    display: block;
+  }
+
+  .light-only {
+    display: none;
+  }
+
+  .swiper-3d.swiper-slide-shadow-left {
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  }
+
+  .swiper-slide-shadow-right {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  }
+
+  .series-list-item-info-learnmore {
+    background: rgba(0, 0, 0, 0.2);
+    border-color: black;
+  }
+
+  .event-details-cost-div {
+    background: rgba(12, 53, 16, 0.3);
+    color: #4abe39;
+  }
+
+  .d,
+  .e,
+  .f,
+  .g,
+  .navbar-logo {
+    fill: white;
+    color: white;
+  }
+
+  .fc-theme-standard td,
+  .fc-theme-standard th,
+  .fc-theme-standard .fc-scrollgrid,
+  .fc .fc-scrollgrid-section > td {
+    border-color: var(--color-surface-mixed-200);
+    color: white;
+  }
+
+  .calendar-component a {
+    color: white;
+    font-weight: 500;
+  }
+  .event-wrapper p,
+  .calendar-header-text {
+    color: white;
+  }
+  .padding-medium.hide-mobile-landscape.calendar-background,
+  .position-relative.padding-medium.flexblock.hide-mobile-landscape.calendar-background {
+    background-color: var(--color-surface-mixed-100);
+  }
+
+  .fc .fc-daygrid-day.fc-day-today {
+    background-color: rgba(20, 129, 224, 0.08);
+  }
+
+  .ql-toolbar-wrapper,
+  .ql-toolbar {
+    background: var(--color-surface-mixed-300);
+  }
+  .ql-editor.ql-blank::before {
+    color: var(--color-surface-mixed-200);
+  }
+  /* Media query for mobile devices */
+  @media screen and (max-width: 767px) {
+    .navbar-wrapper {
+      background-color: var(--color-surface-mixed-200);
+    }
+    .side-navbar {
+      background-image: linear-gradient(rgba(0, 0, 0, 0), var(--color-surface-mixed-100));
+    }
+  }
+  .text-field.search:focus {
+    box-shadow: 0px 0px 60px 100px var(--color-surface-mixed-300);
+  }
+}

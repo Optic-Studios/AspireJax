@@ -1,0 +1,41 @@
+{
+    "name": "Aspire Church App",
+    "short_name": "AspireJax",
+    "theme_color": "#3d6b99",
+    "background_color": "#3d6b99",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/",
+    "icons": [
+        {
+            "src":"/img/icons/aspire_icon_16x.webp",
+            "type": "image/webp",
+            "sizes": "16x16"
+        },
+        {
+            "src":"/img/icons/aspire_icon_32x.webp",
+            "type": "image/webp",
+            "sizes": "32x32"
+        },
+        {
+            "src":"/img/icons/aspire_icon_64x.webp",
+            "type": "image/webp",
+            "sizes": "64x64"
+        },
+        {
+            "src":"/img/icons/aspire_icon_128x.webp",
+            "type": "image/webp",
+            "sizes": "128x128"
+        },
+        {
+            "src":"/img/icons/aspire_icon_256x.webp",
+            "type": "image/webp",
+            "sizes": "256x256"
+        },
+        {
+            "src":"/img/icons/aspire_icon_512x.webp",
+            "type": "image/webp",
+            "sizes": "512x512"
+        }
+    ]
+}
