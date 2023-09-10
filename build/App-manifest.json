@@ -4,8 +4,8 @@
     "description": "The Aspire App allows you to not only engage in the sermons but also engage with our church. We welcome you to use this tool on your walk with Christ.",
     "theme_color": "white",
     "display": "standalone",
-    "scope": "/index.html",
-    "start_url": "/index.html",
+    "scope": "https://app.aspirejax.org/",
+    "start_url": "https://app.aspirejax.org/",
     "categories": ["religion", "christianity", "self-help"],
     "icons": [
         {
