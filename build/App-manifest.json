@@ -2,40 +2,39 @@
     "name": "Aspire Church App",
     "short_name": "AspireJax",
     "description": "The Aspire App allows you to not only engage in the sermons but also engage with our church. We welcome you to use this tool on your walk with Christ.",
-    "theme_color": "var(--theme)",
-    "background_color": "var(--background)",
+    "theme_color": "white",
     "display": "standalone",
     "scope": "/index.html",
     "start_url": "/index.html",
     "categories": ["religion", "christianity", "self-help"],
     "icons": [
         {
-            "src":"/img/icons/aspire_icon_16x.png",
+            "src":"https://uploads-ssl.webflow.com/64aec53bb5a44b5b3f110dbe/64fd21d425f96a17e1833fa5_aspire_icon_16x.png",
             "type": "image/png",
             "sizes": "16x16"
         },
         {
-            "src":"/img/icons/aspire_icon_32x.png",
+            "src":"https://uploads-ssl.webflow.com/64aec53bb5a44b5b3f110dbe/64fd21d4fbf503c813d45ffa_aspire_icon_32x.png",
             "type": "image/png",
             "sizes": "32x32"
         },
         {
-            "src":"/img/icons/aspire_icon_64x.png",
+            "src":"https://uploads-ssl.webflow.com/64aec53bb5a44b5b3f110dbe/64fd21d46df00192e5ead4c1_aspire_icon_64x.png",
             "type": "image/png",
             "sizes": "64x64"
         },
         {
-            "src":"/img/icons/aspire_icon_128x.png",
+            "src":"https://uploads-ssl.webflow.com/64aec53bb5a44b5b3f110dbe/64fd21d4d5d080d410cab667_aspire_icon_128x.png",
             "type": "image/png",
             "sizes": "128x128"
         },
         {
-            "src":"/img/icons/aspire_icon_256x.png",
+            "src":"https://uploads-ssl.webflow.com/64aec53bb5a44b5b3f110dbe/64fd21d4a1040710e6616bb2_aspire_icon_512x.png",
             "type": "image/png",
             "sizes": "256x256"
         },
         {
-            "src":"/img/icons/aspire_icon_512x.png",
+            "src":"https://uploads-ssl.webflow.com/64aec53bb5a44b5b3f110dbe/64fd21d570430e196b5613a8_aspire_icon_256x.png",
             "type": "image/png",
             "sizes": "512x512"
         }
