@@ -29,12 +29,12 @@
             "sizes": "128x128"
         },
         {
-            "src":"https://uploads-ssl.webflow.com/64aec53bb5a44b5b3f110dbe/64fd21d4a1040710e6616bb2_aspire_icon_512x.png",
+            "src":"https://uploads-ssl.webflow.com/64aec53bb5a44b5b3f110dbe/64fd21d570430e196b5613a8_aspire_icon_256x.png",
             "type": "image/png",
             "sizes": "256x256"
         },
         {
-            "src":"https://uploads-ssl.webflow.com/64aec53bb5a44b5b3f110dbe/64fd21d570430e196b5613a8_aspire_icon_256x.png",
+            "src":"https://uploads-ssl.webflow.com/64aec53bb5a44b5b3f110dbe/64fd21d4a1040710e6616bb2_aspire_icon_512x.png",
             "type": "image/png",
             "sizes": "512x512"
         }
