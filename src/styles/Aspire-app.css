@@ -8,6 +8,8 @@
   --color-surface-mixed-600: #75777d;
   --color-surface-mixed-700: #8f9196;
   --color-surface-mixed-800: #b0b3b9;
+  --theme: white;
+  --background: white;
 }
 
 input,
@@ -94,6 +96,10 @@ svg {
 
 /* Media query for tablets and desktops */
 @media screen and (min-width: 768px) {
+  :root {
+    --theme: #2d3139;
+    --background: #2d3139;
+  }
   .tab-collapsed {
     /* Adjust the styles for tablets and desktops here */
     padding-left: 7rem;

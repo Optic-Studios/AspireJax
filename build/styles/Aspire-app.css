@@ -8,6 +8,8 @@
   --color-surface-mixed-600: #75777d;
   --color-surface-mixed-700: #8f9196;
   --color-surface-mixed-800: #b0b3b9;
+  --theme: white;
+  --background: white;
 }
 input,
 textarea {
@@ -77,6 +79,10 @@ svg {
   border-radius: 10px;
 }
 @media screen and (min-width: 768px) {
+  :root {
+    --theme: #2d3139;
+    --background: #2d3139;
+  }
   .tab-collapsed {
     padding-left: 7rem;
   }
