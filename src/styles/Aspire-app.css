@@ -267,37 +267,12 @@ svg {
     color: white;
   }
 
-  .fc-theme-standard td,
-  .fc-theme-standard th,
-  .fc-theme-standard .fc-scrollgrid,
-  .fc .fc-scrollgrid-section > td {
-    border-color: var(--color-surface-mixed-200);
-    color: white;
-  }
-
-  .calendar-component a {
-    color: white;
-    font-weight: 500;
-  }
-  .event-wrapper p,
-  .calendar-header-text {
-    color: white;
-  }
-  .padding-medium.hide-mobile-landscape.calendar-background,
-  .position-relative.padding-medium.flexblock.hide-mobile-landscape.calendar-background {
-    background-color: var(--color-surface-mixed-100);
-  }
-
-  .fc .fc-daygrid-day.fc-day-today {
-    background-color: rgba(20, 129, 224, 0.08);
-  }
-
   .ql-toolbar-wrapper,
   .ql-toolbar {
     background: var(--color-surface-mixed-300);
   }
   .ql-editor.ql-blank::before {
-    color: var(--color-surface-mixed-200);
+    color: var(--color-surface-mixed-500);
   }
   /* Media query for mobile devices */
   @media screen and (max-width: 767px) {
