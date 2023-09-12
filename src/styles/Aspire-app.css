@@ -96,10 +96,6 @@ svg {
 
 /* Media query for tablets and desktops */
 @media screen and (min-width: 768px) {
-  :root {
-    --theme: #2d3139;
-    --background: #2d3139;
-  }
   .tab-collapsed {
     /* Adjust the styles for tablets and desktops here */
     padding-left: 7rem;
@@ -113,7 +109,7 @@ svg {
     display: flex;
   }
 
-  .tab-collapsed .button.navbar .hide-mobile-landscape {
+  .tab-collapsed .button.navbar .navbar-text {
     display: none;
   }
 
