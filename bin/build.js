@@ -7,7 +7,12 @@ const BUILD_DIRECTORY = 'dist';
 const PRODUCTION = process.env.NODE_ENV === 'production';
 
 // Config entrypoint files
-const ENTRY_POINTS = ['src/index.ts', 'src/styles/calendar.css', 'src/styles/Aspire-app.css'];
+const ENTRY_POINTS = [
+  'src/index.ts',
+  'src/event-page.ts',
+  'src/styles/calendar.css',
+  'src/styles/Aspire-app.css',
+];
 
 // Config dev serving
 const LIVE_RELOAD = !PRODUCTION;

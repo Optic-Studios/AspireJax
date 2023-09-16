@@ -53,6 +53,7 @@
   },
   "dependencies": {
     "@finsweet/ts-utils": "^0.39.2",
+    "add-to-calendar-button": "^2.4.1",
     "party-js": "^2.2.0"
   },
   "engines": {

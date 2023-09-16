@@ -23,7 +23,10 @@ textarea {
   background-color: #def03880;
   color: #fff;
 }
-.announcement.critical ::selection {
+.announcement.critical ::selection,
+.form-message-error ::selection,
+.search-empty ::selection,
+.state-empty ::selection {
   background-color: #eb0d0d80;
   color: #fff;
 }
@@ -140,8 +143,15 @@ svg {
   .dash-block.announcements {
     background: transparent;
   }
-  .announcement.good {
+  .announcement.good,
+  .form-message-success {
     color: #37f03d;
+  }
+  .announcement.critical,
+  .form-message-error,
+  .search-empty,
+  .state-empty {
+    color: #fb2d2d;
   }
   .announcement.warning {
     color: #def038;
