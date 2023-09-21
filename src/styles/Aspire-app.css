@@ -94,11 +94,9 @@ svg {
   border-radius: 10px;
 }
 
-/* Media query for tablets and desktops */
 @media screen and (min-width: 768px) {
   .tab-collapsed {
-    /* Adjust the styles for tablets and desktops here */
-    padding-left: 7rem;
+    padding-left: 5.5rem;
   }
 
   .tab-collapsed .navbar-logo.full {

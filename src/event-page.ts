@@ -171,9 +171,14 @@ if (eventJsonRaw && eventJsonRaw.textContent) {
     }
 
     const button = document.getElementById('add-cal-bttn');
+    const button2 = document.getElementById('add-cal-bttn-2');
 
     if (button) {
       button.addEventListener('click', () => atcb_action(config, button));
+    }
+
+    if (button2) {
+      button2.addEventListener('click', () => atcb_action(config, button));
     }
 
     // Concatenate the formatted date and time and map
@@ -218,4 +223,30 @@ if (eventJsonRaw && eventJsonRaw.textContent) {
   }
 } else {
   console.error('Event Json not found or empty');
+}
+
+// Function to handle the click event on the back button
+function handleBackButtonClick() {
+  // Get the referrer (previous page)
+  let { referrer } = document;
+  let currentUrl = window.location.href;
+
+  // Remove the query string from the current URL
+  currentUrl = currentUrl.split('?')[0];
+  referrer = referrer.split('?')[0];
+
+  // Check if the referrer is the same as the current page (without the query string)
+  if (referrer === currentUrl || !referrer.includes('app.aspirejax.org')) {
+    // If yes, redirect to "https://app.aspirejax.org/calendar"
+    window.location.href = 'https://app.aspirejax.org/calendar';
+  } else {
+    // If not, go back to the previous page
+    window.history.back();
+  }
+}
+
+// Find the button with the class "CMS-Back-Button" and add a click event listener
+const backButton = document.querySelector('.cms-back-button');
+if (backButton) {
+  backButton.addEventListener('click', handleBackButtonClick);
 }
