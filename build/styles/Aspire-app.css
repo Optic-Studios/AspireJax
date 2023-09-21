@@ -80,7 +80,7 @@ svg {
 }
 @media screen and (min-width: 768px) {
   .tab-collapsed {
-    padding-left: 5.5rem;
+    padding-left: 6.25rem;
   }
   .tab-collapsed .navbar-logo.full {
     display: none;
@@ -93,7 +93,7 @@ svg {
     display: none;
   }
   .tab-collapsed .navbar-wrapper {
-    width: auto;
+    width: 6.25rem;
   }
   .tab-collapsed #collapse {
     display: none;
