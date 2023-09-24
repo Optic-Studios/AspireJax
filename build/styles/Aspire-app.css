@@ -78,6 +78,86 @@ svg {
 .iframe {
   border-radius: 10px;
 }
+
+.ql-editor blockquote {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 10px;
+}
+.ql-editor li {
+  text-align: left;
+}
+.ql-editor {
+  min-height: 200px;
+}
+
+.ql-editor {
+  min-height: 200px;
+}
+
+.ql-editor.ql-blank::before {
+  margin-left: 18px;
+}
+.sermon-text-input {
+  border: 2px Dashed #689ac7;
+  border-radius: 10px;
+  padding: 3px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 2px;
+  margin-right: 2px;
+  text-align: center;
+  width: calc(1ch * var(--size) + 20px);
+}
+.sermon-text-input.correct {
+  background-color: rgba(95, 248, 111, 0.3);
+  border-radius: 10px;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.shake {
+  animation: shake 0.5s;
+}
+
+@keyframes dance {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  75% {
+    transform: translateY(-5px);
+  }
+}
+
+.dance {
+  animation: dance 1s;
+}
+
 @media screen and (min-width: 768px) {
   .tab-collapsed {
     padding-left: 6.25rem;
@@ -220,7 +300,7 @@ svg {
   .ql-toolbar {
     background: var(--color-surface-mixed-300);
   }
-  .ql-editor.ql-blank:before {
+  .ql-editor.ql-blank::before {
     color: var(--color-surface-mixed-500);
   }
 
@@ -229,7 +309,8 @@ svg {
     border: 1.5px solid white;
   }
   .bible-picker-modal-wrapper,
-  .author-select-droplist {
+  .author-select-droplist,
+  .ql-toolbar-dropdown {
     background-color: var(--color-surface-mixed-300);
   }
 
