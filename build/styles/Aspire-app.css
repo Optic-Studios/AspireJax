@@ -133,7 +133,6 @@ svg {
     transform: translateX(0);
   }
 }
-
 .shake {
   animation: shake 0.5s;
 }
