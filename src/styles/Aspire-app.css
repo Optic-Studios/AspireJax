@@ -11,59 +11,48 @@
   --theme: white;
   --background: white;
 }
-
 input,
 textarea {
   touch-action: manipulation;
 }
-
 .announcement.good ::selection {
-  background-color: rgba(55, 240, 61, 0.5);
-  color: white;
+  background-color: #37f03d80;
+  color: #fff;
 }
-
 .announcement.warning ::selection {
-  background-color: rgba(222, 240, 56, 0.5);
-  color: white;
+  background-color: #def03880;
+  color: #fff;
 }
-
 .announcement.critical ::selection {
-  background-color: rgba(235, 13, 13, 0.5);
-  color: white;
+  background-color: #eb0d0d80;
+  color: #fff;
 }
-
 input:autofill {
-  background-color: rgba(33, 134, 225, 0.7) !important;
+  background-color: #2186e1b3 !important;
   border: 3px solid #2186e1;
 }
 input:-webkit-autofill {
-  background-color: rgba(33, 134, 225, 0.7) !important;
+  background-color: #2186e1b3 !important;
   border: 3px solid #2186e1;
 }
-
 ::-moz-selection {
-  color: white;
+  color: #fff;
   background: rgba(61, 107, 153, 0.3);
   border-radius: 10px;
   overflow: hidden;
 }
-
 ::selection {
-  color: white;
+  color: #fff;
   background: rgba(61, 107, 153, 0.3);
   border-radius: 10px;
   overflow: hidden;
 }
-
 svg {
   fill: currentColor;
 }
-
-/*width*/
 ::-webkit-scrollbar {
   width: 10px;
 }
-
 ::-webkit-scrollbar-track {
   background: rgba(0, 0, 0, 0);
   border-radius: 20px;
@@ -74,72 +63,55 @@ svg {
 ::-webkit-scrollbar-thumb {
   background: #2186e1;
   border-radius: 20px;
-  box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 5px 0px;
+  box-shadow: #0000001a 1px 1px 5px;
 }
-
 .rtTooltipHeader {
   padding: 5px 10px 5px 15px;
 }
 .rtTooltipFooter {
-  padding: 0px 50px 25px 0px;
+  padding: 0 50px 25px 0;
 }
 .rtTooltipBrandLink {
   visibility: hidden;
 }
-.rtTooltipRoundedCorners .rtContainer {
-  border-radius: 10px;
-}
-
+.rtTooltipRoundedCorners .rtContainer,
 .iframe {
   border-radius: 10px;
 }
-
 @media screen and (min-width: 768px) {
   .tab-collapsed {
     padding-left: 6.25rem;
   }
-
   .tab-collapsed .navbar-logo.full {
     display: none;
   }
-
   .tab-collapsed .navbar-logo.small {
     display: flex;
   }
-
-  .tab-collapsed .button.navbar .navbar-text {
-    display: none;
-  }
-
+  .tab-collapsed .button.navbar .navbar-text,
   .tab-collapsed .collapse-content {
     display: none;
   }
-
   .tab-collapsed .navbar-wrapper {
     width: 6.25rem;
   }
-
   .tab-collapsed #collapse {
     display: none;
   }
-
   .tab-collapsed #expand {
     display: block;
   }
 }
-
 @media (prefers-color-scheme: dark) {
   body {
     background: var(--color-surface-mixed-200);
     color: var(--color-surface-mixed-800);
   }
-
   .page-wrapper,
   .event-details-section,
   .notes-top {
     background-color: var(--color-surface-mixed-100);
   }
-
   h1,
   h2,
   h3,
@@ -147,7 +119,6 @@ svg {
   .text-color-blue {
     color: var(--Brand);
   }
-
   h4,
   h5,
   h6,
@@ -155,52 +126,43 @@ svg {
   .heading-style-h5,
   .heading-style-h6,
   label {
-    color: white;
+    color: #fff;
   }
-
   p,
   .button.is-text,
   .fs_modal-1_close-icon {
     color: var(--color-surface-mixed-800);
   }
-
   .dash-block,
   .connect-form-input-wrapper {
     background: var(--color-surface-mixed-200);
   }
-
   .dash-block.announcements {
     background: transparent;
   }
-
   .announcement.good {
     color: #37f03d;
   }
-
   .announcement.warning {
     color: #def038;
   }
   .mobile-header {
     background: var(--color-surface-mixed-200);
-    color: white;
+    color: #fff;
   }
-
   .mobile-header.spacer {
     background-color: transparent;
   }
-
   .text-color-black,
   .mobile-header,
   .Navbar-Logo,
   .tab-link,
   .button.is-icon.is-tab {
-    color: white;
+    color: #fff;
   }
-
   .background-color-white {
     background: var(--color-surface-mixed-200);
   }
-
   .background-color-grey,
   .section-header,
   .event-details-datetime-div,
@@ -208,71 +170,77 @@ svg {
   .notes-bottom {
     background: var(--color-surface-mixed-400);
   }
-
   .background-color-black {
     background: white;
   }
-
   .icon-1x1-medium {
     fill: currentColor;
   }
-
   .textarea,
   .text-field,
   .Sermon-Text-Input {
     background: var(--color-surface-mixed-100);
     border-color: var(--color-surface-mixed-400);
-    color: white;
+    color: #fff;
   }
-
   .list-item {
     background: var(--color-surface-mixed-200);
     border-color: var(--color-surface-mixed-400);
-    color: white;
+    color: #fff;
   }
   .dark-only {
     display: block;
   }
-
   .light-only {
     display: none;
   }
-
   .swiper-3d.swiper-slide-shadow-left {
     background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   }
-
   .swiper-slide-shadow-right {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   }
-
   .series-list-item-info-learnmore {
     background: rgba(0, 0, 0, 0.2);
-    border-color: black;
+    border-color: #000;
   }
-
   .event-details-cost-div {
     background: rgba(12, 53, 16, 0.3);
     color: #4abe39;
   }
-
   .d,
   .e,
   .f,
   .g,
   .navbar-logo {
-    fill: white;
-    color: white;
+    fill: #fff;
+    color: #fff;
   }
-
   .ql-toolbar-wrapper,
   .ql-toolbar {
     background: var(--color-surface-mixed-300);
   }
-  .ql-editor.ql-blank::before {
+  .ql-editor.ql-blank:before {
     color: var(--color-surface-mixed-500);
   }
-  /* Media query for mobile devices */
+
+  .author-select,
+  .bible-picker-input {
+    border: 1.5px solid white;
+  }
+  .bible-picker-modal-wrapper,
+  .author-select-droplist {
+    background-color: var(--color-surface-mixed-300);
+  }
+
+  .bible-picker-modal-header {
+    border-bottom: 1px solid var(--color-surface-mixed-500);
+  }
+  .bible-picker-chapter,
+  .bible-picker-passage {
+    color: white;
+  }
+
   @media screen and (max-width: 767px) {
     .navbar-wrapper {
       background-color: var(--color-surface-mixed-200);
@@ -282,6 +250,6 @@ svg {
     }
   }
   .text-field.search:focus {
-    box-shadow: 0px 0px 60px 100px var(--color-surface-mixed-300);
+    box-shadow: 0 0 60px 100px var(--color-surface-mixed-300);
   }
 }
