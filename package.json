@@ -54,7 +54,9 @@
   "dependencies": {
     "@finsweet/ts-utils": "^0.39.2",
     "add-to-calendar-button": "^2.4.1",
+    "intl-tel-input": "^19.2.3",
     "party-js": "^2.2.0",
+    "sortablejs": "^1.15.2",
     "swiper": "^10.2.0"
   },
   "engines": {

@@ -10,8 +10,10 @@ const PRODUCTION = process.env.NODE_ENV === 'production';
 const ENTRY_POINTS = [
   'src/index.ts',
   'src/event-page.ts',
+  'src/form-logic.ts',
   'src/styles/calendar.css',
   'src/styles/Aspire-app.css',
+  'src/styles/Aspire-form.css',
 ];
 
 // Config dev serving
