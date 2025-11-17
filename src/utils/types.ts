@@ -8,4 +8,6 @@ export type Event = {
   rruleStr: string;
   rrule: string;
   hide: string;
+  exdateStr: string;
+  exdate: string[];
 };

@@ -74,41 +74,48 @@ function createCalendar() {
         window.location.href = newUrl;
       },
       eventContent: function (arg) {
-        const orginalEvent = events.find((event) => event.id === arg.event.id);
+        const originalEvent = events.find((event) => event.id === arg.event.id);
+        if (!originalEvent) return;
         const decodedTitle = decodeHtmlEntities(arg.event.title);
         let eventDiv = '';
+
+        const eventDate = arg.event.start.toISOString().split('T')[0];
+
+        if (originalEvent.exdate && originalEvent.exdate.includes(eventDate)) {
+          return { html: '' }; // Do not render the event if it falls on an excluded date
+        }
 
         if (arg.event.allDay === true) {
           //All Day Events
           const wrapperStyle = `
-        --hover-color: ${hexToRgba(orginalEvent.categoryColor || '#3788d8', 0.1)};
-        --event-font-color-light: ${adjustHex(orginalEvent.categoryColor || '#3788d8', -20)};
-        --event-font-color-dark: ${adjustHex(orginalEvent.categoryColor || '#3788d8', 60)};
-        background-color: ${hexToRgba(orginalEvent.categoryColor || '#3788d8', 0.2)};
-        border-color: ${orginalEvent.categoryColor || '#3788d8'};
+        --hover-color: ${hexToRgba(originalEvent.categoryColor || '#3788d8', 0.1)};
+        --event-font-color-light: ${adjustHex(originalEvent.categoryColor || '#3788d8', -20)};
+        --event-font-color-dark: ${adjustHex(originalEvent.categoryColor || '#3788d8', 60)};
+        background-color: ${hexToRgba(originalEvent.categoryColor || '#3788d8', 0.2)};
+        border-color: ${originalEvent.categoryColor || '#3788d8'};
         `;
 
           eventDiv = `
         <div class="event-wrapper allDay" style="${wrapperStyle}"><p>
             ${decodedTitle}
           </p></div>`;
-        } else if (orginalEvent.rruleStr === '') {
+        } else if (originalEvent.rruleStr === '' || originalEvent.rruleStr.includes('MONTHLY')) {
           //Nonrepeating Events
 
-          const timeRangeStr = formatTime(orginalEvent.start, orginalEvent.end);
+          const timeRangeStr = formatTime(originalEvent.start, originalEvent.end);
 
           const wrapperStyle = `
-        --hover-color: ${hexToRgba(orginalEvent.categoryColor || '#3788d8', 0.1)};
-        --event-font-color-light: ${adjustHex(orginalEvent.categoryColor || '#3788d8', -20)};
-        --event-font-color-dark: ${adjustHex(orginalEvent.categoryColor || '#3788d8', 60)};
-        background-color: ${hexToRgba(orginalEvent.categoryColor || '#3788d8', 0.2)};
-        border-color: ${orginalEvent.categoryColor || '#3788d8'};
+        --hover-color: ${hexToRgba(originalEvent.categoryColor || '#3788d8', 0.1)};
+        --event-font-color-light: ${adjustHex(originalEvent.categoryColor || '#3788d8', -20)};
+        --event-font-color-dark: ${adjustHex(originalEvent.categoryColor || '#3788d8', 60)};
+        background-color: ${hexToRgba(originalEvent.categoryColor || '#3788d8', 0.2)};
+        border-color: ${originalEvent.categoryColor || '#3788d8'};
         `;
 
           const timeWrapperStyle = `
-        --hover-color: ${hexToRgba(orginalEvent.categoryColor || '#3788d8', 0.1)};
-        --event-font-color-light: ${adjustHex(orginalEvent.categoryColor || '#3788d8', -20)};
-        --event-font-color-dark: ${adjustHex(orginalEvent.categoryColor || '#3788d8', 30)};
+        --hover-color: ${hexToRgba(originalEvent.categoryColor || '#3788d8', 0.1)};
+        --event-font-color-light: ${adjustHex(originalEvent.categoryColor || '#3788d8', -20)};
+        --event-font-color-dark: ${adjustHex(originalEvent.categoryColor || '#3788d8', 30)};
         `;
 
           eventDiv = `
@@ -124,10 +131,10 @@ function createCalendar() {
         } else {
           //Repeating Events
           const circleHtml = `<span class="event-circle" style="background-color: ${
-            orginalEvent.categoryColor || '#3788d8'
+            originalEvent.categoryColor || '#3788d8'
           };"></span>`;
           const wrapperStyle = `
-        --hover-color: ${hexToRgba(orginalEvent.categoryColor || '#3788d8', 0.2)};
+        --hover-color: ${hexToRgba(originalEvent.categoryColor || '#3788d8', 0.2)};
         `;
 
           eventDiv = `
@@ -292,6 +299,7 @@ createCalendar()
       start: string | Date;
       end: string | Date;
       title: string;
+      exdate: string[];
     };
 
     // Loop through each swiper-slide element
@@ -307,18 +315,14 @@ createCalendar()
             eventJson.rruleStr !== '' &&
             (eventJson.rruleStr.includes('WEEKLY') || eventJson.rruleStr.includes('MONTHLY'))
           ) {
-            console.log('Recuring!\n\n', eventJson.title, '\n\n');
             startDate = new Date(getNextRRuleOccurrence(eventJson.rruleStr, startDate).startDate);
             endDate = startDate;
           }
-
-          console.log('Event: ', eventJson.title, '\nEvent Date: ', startDate);
 
           // Check if the start date is not within the next week
           if (startDate >= oneWeekFromNow || endDate < currentDate) {
             // Delete the swiper-slide element
             slide.remove();
-            console.log('removed: ', eventJson.title);
           }
         } catch (e) {
           console.error('Could not parse JSON', e);
