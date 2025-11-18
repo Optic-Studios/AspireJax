@@ -2,7 +2,7 @@ import 'add-to-calendar-button';
 
 import { atcb_action } from 'add-to-calendar-button';
 
-import { getNextRRuleOccurrence } from '$utils/getNextDate';
+import { getNextRRuleOccurrence } from '$utils/eventHelperFunctions';
 
 // Helper function to format date as YYYYMMDD
 function formatDate(date: string | Date) {

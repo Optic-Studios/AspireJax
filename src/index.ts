@@ -4,16 +4,15 @@ import { Calendar } from '@fullcalendar/core';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
 import listPlugin from '@fullcalendar/list';
-import rrule from '@fullcalendar/rrule';
 import rrulePlugin from '@fullcalendar/rrule';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import Swiper from 'swiper';
 import { Autoplay, Keyboard, Navigation, Pagination } from 'swiper/modules';
 
+import { getNextRRuleOccurrence, hydrateEventCardsFromEvents } from '$utils/eventHelperFunctions';
 import { getEvents } from '$utils/getEvents';
-import { getNextRRuleOccurrence } from '$utils/getNextDate';
 
-let events;
+const events = getEvents();
 function createCalendar() {
   window.Webflow ||= [];
   window.Webflow.push(() => {
@@ -21,8 +20,6 @@ function createCalendar() {
     const dayCalendarElement = document.querySelector<HTMLElement>('[data-element="day-calendar"]');
     if (!calendarElement) return;
     if (!dayCalendarElement) return;
-
-    events = getEvents();
 
     const dayCalendar = new Calendar(dayCalendarElement, {
       plugins: [dayGridPlugin, rrulePlugin],
@@ -149,7 +146,6 @@ function createCalendar() {
       displayEventTime: false,
 
       fixedWeekCount: false,
-
       events,
     });
 
@@ -412,4 +408,6 @@ createCalendar()
     window.matchMedia('(prefers-color-scheme: light)').addListener(function (e) {
       applyStylesBasedOnColorScheme();
     });
+
+    hydrateEventCardsFromEvents(events);
   });

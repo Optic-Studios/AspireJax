@@ -53,6 +53,12 @@
   },
   "dependencies": {
     "@finsweet/ts-utils": "^0.39.2",
+    "@fullcalendar/core": "^6.1.19",
+    "@fullcalendar/daygrid": "^6.1.19",
+    "@fullcalendar/interaction": "^6.1.19",
+    "@fullcalendar/list": "^6.1.19",
+    "@fullcalendar/rrule": "^6.1.19",
+    "@fullcalendar/timegrid": "^6.1.19",
     "add-to-calendar-button": "^2.4.1",
     "intl-tel-input": "^19.2.3",
     "party-js": "^2.2.0",

@@ -1,0 +1,36 @@
+@media (prefers-color-scheme: dark) {
+  .event-wrapper.allDay p {
+    color: var(--event-font-color-dark);
+  }
+
+  .event-wrapper.fullEvent p {
+    color: var(--event-font-color-dark);
+  }
+
+  .event-time-wrapper {
+    color: var(--event-font-color-dark);
+  }
+
+  .fc-theme-standard td,
+  .fc-theme-standard th,
+  .fc-theme-standard .fc-scrollgrid,
+  .fc .fc-scrollgrid-section > td {
+    border-color: var(--color-surface-mixed-200);
+    color: #fff;
+  }
+  .calendar-component a {
+    color: #fff;
+    font-weight: 500;
+  }
+  .event-wrapper p,
+  .calendar-header-text {
+    color: #fff;
+  }
+  .padding-medium.hide-mobile-landscape.calendar-background,
+  .position-relative.padding-medium.flexblock.hide-mobile-landscape.calendar-background {
+    background-color: var(--color-surface-mixed-100);
+  }
+  .fc .fc-daygrid-day.fc-day-today {
+    background-color: #1481e014;
+  }
+}

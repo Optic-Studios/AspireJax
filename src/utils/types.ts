@@ -7,6 +7,10 @@ export type Event = {
   categoryColor: string;
   rruleStr: string;
   rrule: string;
+  rruleEnum: string;
+  rruleInterval: string;
+  rruleCount: string;
+  rruleByDay: string;
   hide: string;
   exdateStr: string;
   exdate: string[];
